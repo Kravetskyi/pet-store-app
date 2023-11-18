@@ -44,11 +44,21 @@
       </nav>
       <header class="header">
         <div class="header__content">
-          <h1 class="heading-1 mg-top-big">
+          <h1 class="heading-1 mg-top-big mg-bt-sm">
             The best place to buy top quality products for your pets
           </h1>
           <p class="regular-text">Shop by pet, brand or products on sale!</p>
-          <div class="heding__search-container"></div>
+          <form action="#" class="header__search-container">
+            <input
+              type="text"
+              class="header__input"
+              placeholder="What are you looking for?"
+            />
+            <svg class="header__icon">
+              <use xlink:href="src/img/sprite.svg#icon-search"></use>
+            </svg>
+            <button class="header__btn">Search</button>
+          </form>
         </div>
         <div class="header__img-container"></div>
       </header>

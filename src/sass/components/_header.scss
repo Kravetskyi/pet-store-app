@@ -3,20 +3,80 @@
   width: 75%;
   margin: 0 auto;
 
-  padding-top: 7rem;
+  padding-top: 10rem;
 
   display: flex;
 
   &__img-container {
     background-image: url("/src/img/dog-header.jpg");
-    background-size: cover;
-    margin-left: 2rem;
-    margin-right: 8rem;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    margin-left: 12rem;
+    margin-right: 12rem;
     // max-height: 80%;
     // max-width: 30%;
     min-height: 40rem;
-    min-width: 35rem;
-    max-height: 50rem;
+    min-width: 30rem;
+    max-width: 35rem;
+    max-height: 45rem;
     border-radius: 150px;
+  }
+
+  // &__content {
+  //   border: 1px solid black;
+  // }
+
+  &__search-container {
+    // border: 1px solid pink;
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__input {
+    height: 5.5rem;
+    flex: 0 0 70%;
+    border: none;
+    box-shadow: 0 0.2rem 1rem rgba(black, 0.2);
+    border-radius: 35px;
+    box-sizing: border-box;
+    padding: 0 5rem 0 3rem;
+    font-family: inherit;
+    font-size: inherit;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-primary-dark;
+      font-size: 1.6rem;
+      font-family: "Roboto";
+      font-weight: 400;
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    height: 3rem;
+    width: 3rem;
+    fill: $color-primary-dark;
+    margin-left: -6rem;
+    cursor: pointer;
+  }
+
+  &__btn {
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 0 3rem;
+    border-radius: 30px;
+    box-shadow: 0 0.2rem 1rem rgba(black, 0.2);
+    cursor: pointer;
+    background-color: $color-secondary;
   }
 }
