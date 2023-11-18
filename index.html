@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/sass/main.scss">
-</head>
-<body>
-    
-</body>
-</html
+    <link rel="stylesheet" href="src/sass/main.scss" />
+  </head>
+  <body>
+    <div class="landing">
+      <nav class="nav">
+        <div class="nav__logo">
+          <svg>
+            <use xlink:href="src/img/sprite.svg#icon-dog-paw"></use>
+          </svg>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item nav__item--1">
+            <a href="#" class="nav__link">home</a>
+          </li>
+          <li class="nav__item nav__item--2">
+            <a href="#" class="nav__link">categories</a>
+          </li>
+          <li class="nav__item nav__item--3">
+            <a href="#" class="nav__link">blog</a>
+          </li>
+          <li class="nav__item nav__item--4">
+            <a href="#" class="nav__link">contact</a>
+          </li>
+        </ul>
+        <div class="nav__icons">
+          <svg class="nav__icon">
+            <use xlink:href="src/img/sprite.svg#icon-search"></use>
+          </svg>
+
+          <svg class="nav__icon">
+            <use xlink:href="src/img/sprite.svg#icon-cart"></use>
+          </svg>
+
+          <svg class="nav__icon">
+            <use xlink:href="src/img/sprite.svg#icon-user"></use>
+          </svg>
+        </div>
+      </nav>
+      <header class="header"></header>
+      <section class="categories"></section>
+    </div>
+  </body>
+</html>
