@@ -36,5 +36,21 @@ body {
 
 .landing {
   background-color: $color-bg;
-  width: 100vw;
+  width: 100%;
+}
+
+.heading-1 {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.mg-top-big {
+  margin-top: 5rem;
+}
+
+.regular-text {
+  color: $color-primary-light-2;
+  font-size: 2.5rem;
+  font-weight: 300;
 }

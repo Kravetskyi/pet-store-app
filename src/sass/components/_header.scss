@@ -1,0 +1,22 @@
+.header {
+  height: calc(100vh - 10rem);
+  width: 75%;
+  margin: 0 auto;
+
+  padding-top: 7rem;
+
+  display: flex;
+
+  &__img-container {
+    background-image: url("/src/img/dog-header.jpg");
+    background-size: cover;
+    margin-left: 2rem;
+    margin-right: 8rem;
+    // max-height: 80%;
+    // max-width: 30%;
+    min-height: 40rem;
+    min-width: 35rem;
+    max-height: 50rem;
+    border-radius: 150px;
+  }
+}
