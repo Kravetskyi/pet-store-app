@@ -8,18 +8,64 @@
 
 .offer {
   border-radius: 15px;
-  height: 30rem;
+  height: 33rem;
   box-shadow: 1rem 1rem 1rem rgba($color: black, $alpha: 0.03);
   padding: 3rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   &__text {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    &--dog {
+      background-image: url("/src/img/black-pug.webp"),
+        linear-gradient(
+          to bottom,
+          $color-tertiary-dark,
+          lighten($color-tertiary-dark, 20%)
+        );
+      background-size: 120%;
+      background-position: 50% 0%;
+    }
+
+    &--cat {
+      background-image: url("/src/img/cat-offer.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__discount {
+    width: 7rem;
+    height: 7rem;
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    right: 20%;
   }
 
   &__btn {
