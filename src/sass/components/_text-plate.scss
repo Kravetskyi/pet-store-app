@@ -1,0 +1,18 @@
+.text-plate {
+  width: 100%;
+  min-height: 4rem;
+  max-height: 6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  gap: 2rem;
+  border-radius: 15px;
+
+  box-shadow: 0 0rem 1rem rgba(black, 0.1);
+  &__logo {
+    height: 2.75rem;
+    width: 2.75rem;
+    fill: $color-primary-dark;
+  }
+}

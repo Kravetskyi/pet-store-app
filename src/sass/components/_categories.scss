@@ -10,23 +10,26 @@
 
 .categories {
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 
   &__item {
-    flex-basis: calc(100% / 6 - 2rem);
+    flex-basis: calc(100% / 7 - 2rem);
     min-width: 13rem;
     border-radius: 30px;
-    height: 17rem;
+    height: 19rem;
     background-color: $color-tertiary-light-2;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 0.5rem rgba(black, 0.05);
+    border: 1px solid $color-tertiary-dark;
   }
 
   &__name {
-    padding-top: 3rem;
+    padding-top: 4rem;
     font-size: 2rem;
     font-weight: 500;
     flex: 0 0 40%;
@@ -62,19 +65,19 @@
     &--bird {
       background-image: url("/src/img/parrot.png");
       background-size: 8rem;
-      background-position: 50% -1500%;
+      background-position: 50% 200%;
     }
 
     &--rabbit {
       background-image: url("/src/img/rabbit.png");
       background-size: 12rem;
-      background-position: 50% -20%;
+      background-position: 50% -50%;
     }
 
     &--lizard {
       background-image: url("/src/img/lizard.png");
       background-size: 14rem;
-      background-position: 50% 150%;
+      background-position: 50% 100%;
     }
   }
 }
