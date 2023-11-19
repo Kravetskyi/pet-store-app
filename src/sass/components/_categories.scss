@@ -1,5 +1,5 @@
 .categories-section {
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -17,15 +17,16 @@
     flex-basis: calc(100% / 6 - 2rem);
     min-width: 13rem;
     border-radius: 30px;
-    height: 20rem;
+    height: 17rem;
     background-color: $color-tertiary-light-2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 0.5rem rgba(black, 0.05);
   }
 
   &__name {
-    padding-top: 4rem;
+    padding-top: 3rem;
     font-size: 2rem;
     font-weight: 500;
     flex: 0 0 40%;
@@ -43,13 +44,13 @@
     &--dog {
       background-image: url("/src/img/black-pug.webp");
       background-size: 12rem;
-      background-position: 50% -1000%;
+      background-position: 50% -20%;
     }
 
     &--cat {
       background-image: url("/src/img/cat.png");
       background-size: 17rem;
-      background-position: 50% 0%;
+      background-position: 50% 10%;
     }
 
     &--fish {
@@ -61,19 +62,19 @@
     &--bird {
       background-image: url("/src/img/parrot.png");
       background-size: 8rem;
-      background-position: 50% 200%;
+      background-position: 50% -1500%;
     }
 
     &--rabbit {
       background-image: url("/src/img/rabbit.png");
       background-size: 12rem;
-      background-position: 50% -100%;
+      background-position: 50% -20%;
     }
 
     &--lizard {
       background-image: url("/src/img/lizard.png");
       background-size: 14rem;
-      background-position: 50% 100%;
+      background-position: 50% 150%;
     }
   }
 }
