@@ -1,26 +1,28 @@
 .header {
   height: calc(100vh - 10rem);
-  width: 75%;
+  width: 70%;
   margin: 0 auto;
 
-  padding-top: 10rem;
+  padding-top: 12rem;
 
   display: flex;
 
   &__img-container {
-    background-image: url("/src/img/dog-header.jpg");
-    background-size: 120%;
+    // background-image: url("/src/img/dog-header.jpg");
+    background-color: $color-tertiary-dark;
+    background-image: url("/src/img/black-pug.webp");
+    background-size: 135%;
     background-repeat: no-repeat;
     background-position: 50% 100%;
-    margin-left: 12rem;
+    margin-left: 7rem;
     margin-right: 12rem;
     // max-height: 80%;
     // max-width: 30%;
-    min-height: 40rem;
-    min-width: 30rem;
-    max-width: 35rem;
-    max-height: 45rem;
-    border-radius: 150px;
+    min-height: 45rem;
+    min-width: 35rem;
+    max-width: 40rem;
+    max-height: 50rem;
+    border-radius: 170px;
   }
 
   // &__content {

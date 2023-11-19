@@ -1,0 +1,79 @@
+.categories-section {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  padding-bottom: 20rem;
+}
+
+.categories {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+
+  &__item {
+    flex-basis: calc(100% / 6 - 2rem);
+    min-width: 13rem;
+    border-radius: 30px;
+    height: 20rem;
+    background-color: $color-tertiary-light-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    padding-top: 4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    flex: 0 0 40%;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+
+    &--dog {
+      background-image: url("/src/img/black-pug.webp");
+      background-size: 12rem;
+      background-position: 50% -1000%;
+    }
+
+    &--cat {
+      background-image: url("/src/img/cat.png");
+      background-size: 17rem;
+      background-position: 50% 0%;
+    }
+
+    &--fish {
+      background-image: url("/src/img/fish.png");
+      background-size: 10rem;
+      background-position: 50% 50%;
+    }
+
+    &--bird {
+      background-image: url("/src/img/parrot.png");
+      background-size: 8rem;
+      background-position: 50% 200%;
+    }
+
+    &--rabbit {
+      background-image: url("/src/img/rabbit.png");
+      background-size: 12rem;
+      background-position: 50% -100%;
+    }
+
+    &--lizard {
+      background-image: url("/src/img/lizard.png");
+      background-size: 14rem;
+      background-position: 50% 100%;
+    }
+  }
+}
