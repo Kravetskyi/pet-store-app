@@ -1,0 +1,51 @@
+.favorite-section {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.favorite {
+  background-color: $color-primary-light-1;
+  flex: calc(100% / 2);
+  border-radius: 15px;
+
+  &--cat {
+    background-image: linear-gradient(rgba(white, 0.4), rgba(white, 0.4)),
+      url("/src/img/cat-eat.webp");
+    background-size: cover;
+    background-position: 100% 40%;
+  }
+
+  &--dog {
+    background-image: linear-gradient(rgba(white, 0.4), rgba(white, 0.4)),
+      url("/src/img/dog-play.jpg");
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__desc {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $color-primary-dark;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    border: none;
+    background-color: $color-secondary;
+    color: white;
+    font-family: inherit;
+    padding: 1.25rem 2.75rem;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
