@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pet Store</title>
     <link rel="stylesheet" href="src/sass/main.scss" />
+    <link rel="icon" type="image/x-icon" href="/src/img/black-pug.webp" />
   </head>
   <body>
     <div class="landing">
@@ -398,6 +399,139 @@
               <div class="blog__name">Dr. Pet</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="heading-2">Contact Us</h2>
+      <div class="contact">
+        <div class="contact__info-map">
+          <div class="contact__info">
+            <h2 class="heading-2">Contact Information</h2>
+            <div class="contact__grid">
+              <div class="contact__grid-item contact__grid-item--1">
+                <div class="contact__header">
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <p class="contact__headtext">Phone</p>
+                </div>
+
+                <div class="contact__item">+123 456 789 101</div>
+                <div class="contact__item">+101 978 654 321</div>
+              </div>
+
+              <div class="contact__grid-item contact__grid-item--2">
+                <div class="contact__header">
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <p class="contact__headtext">E-mail</p>
+                </div>
+
+                <div class="contact__item">petstore@email.com</div>
+              </div>
+
+              <div class="contact__grid-item contact__grid-item--3">
+                <div class="contact__header">
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-location"></use>
+                  </svg>
+                  <p class="contact__headtext">Address</p>
+                </div>
+
+                <div class="contact__item">Illienka 36 Street</div>
+                <div class="contact__item">Kyiv, Ukraine</div>
+                <div class="contact__item">Zip Code: 04119</div>
+              </div>
+              <div class="contact__grid-item contact__grid-item--4">
+                <div class="contact__header">
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-social"></use>
+                  </svg>
+                  <p class="contact__headtext">Social</p>
+                </div>
+
+                <div class="contact__item">
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <svg class="contact__icon">
+                    <use xlink:href="src/img/sprite.svg#icon-x"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3199.4381924462086!2d30.465846924210304!3d50.471045991322256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1701434989230!5m2!1sen!2sua"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div class="contact__form">
+          <h2 class="heading-2">Send Us a Message</h2>
+          <form action="#" class="contact__fields">
+            <div class="contact__content">
+              <div class="contact__name">
+                <div class="contact__name--subdiv">
+                  <label for="first-name" class="contact__label"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    class="contact__input"
+                    placeholder="Anton"
+                    required
+                  />
+                </div>
+                <div class="contact__name--subdiv">
+                  <label for="last-name" class="contact__label"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    class="contact__input"
+                    placeholder="Juan"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact__email">
+                <label for="email" class="contact__label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="contact__input"
+                  placeholder="example@email.com"
+                  required
+                />
+              </div>
+
+              <div class="contact__message">
+                <label for="message" class="contact__label">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="contact__textarea"
+                  placeholder="Type your message here..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <button class="contact__btn">Send the message</button>
+          </form>
         </div>
       </div>
     </section>

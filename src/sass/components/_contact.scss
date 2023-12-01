@@ -1,0 +1,241 @@
+.contact-section {
+  background-color: $color-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rem;
+
+  .heading-2 {
+    padding: 8rem 0 7rem 0;
+  }
+}
+
+.contact {
+  width: 45%;
+  height: 57rem;
+
+  gap: 2rem;
+  display: flex;
+
+  & > * {
+    height: 100%;
+    border-radius: 15px;
+
+    .heading-2 {
+      padding: 0 0 3rem;
+    }
+    // padding: 4rem 4rem;
+  }
+
+  &__info-map {
+    width: 55%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    // background-color: white;
+  }
+
+  &__info {
+    border-radius: 15px;
+    background-color: white;
+    flex: 70%;
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid {
+    width: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      &--2,
+      &--4 {
+        svg {
+          height: 2.2rem;
+          width: 2.2rem;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: $color-primary-dark;
+  }
+
+  &__headtext {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__item {
+    line-height: 1;
+    font-weight: 400;
+    font-size: 1.45rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+  }
+
+  &__form {
+    width: 45%;
+    background-color: $color-primary-dark;
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    padding: 4rem;
+    padding-bottom: 2rem;
+    .heading-2 {
+      color: white;
+    }
+
+    ::selection {
+      background: white;
+      color: $color-primary-dark;
+    }
+
+    flex-direction: column;
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__fields {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__label {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 1rem;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $color-primary-light-2;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1.5rem;
+    transition: all 0.4s;
+
+    &::placeholder {
+      color: white;
+      font-family: inherit;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus:invalid {
+      border-bottom: 2px solid $color-secondary;
+    }
+
+    &:valid {
+      border-bottom: 2px solid $color-input-valid;
+    }
+  }
+
+  &__name {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+
+    &--subdiv {
+      flex: 50%;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 58%;
+  }
+
+  textarea {
+    resize: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    border: 2px solid $color-primary-light-2;
+    padding: 1.5rem;
+    color: $color-primary-light-2;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &:valid {
+      border: 2px solid $color-input-valid;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-primary-light-2;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    box-shadow: 0 0.2rem 1rem rgba(black, 0.2);
+    cursor: pointer;
+    background-color: $color-secondary;
+    // align-self: flex-end;
+  }
+
+  &__map {
+    flex: 30%;
+    border-radius: 15px;
+    // background-color: $color-primary-light-2;
+    overflow: hidden;
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
