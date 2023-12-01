@@ -17,36 +17,44 @@
         </div>
         <ul class="nav__list">
           <li class="nav__item nav__item--1">
-            <a href="#" class="nav__link">home</a>
+            <a href="#home" class="nav__link">home</a>
           </li>
           <li class="nav__item nav__item--2">
-            <a href="#" class="nav__link">categories</a>
+            <a href="#categories" class="nav__link">categories</a>
           </li>
           <li class="nav__item nav__item--3">
-            <a href="#" class="nav__link">blog</a>
+            <a href="#blog" class="nav__link">blog</a>
           </li>
           <li class="nav__item nav__item--4">
-            <a href="#" class="nav__link">contact</a>
+            <a href="#contact" class="nav__link">contact</a>
           </li>
         </ul>
         <div class="nav__icons">
-          <svg class="nav__icon">
-            <use xlink:href="src/img/sprite.svg#icon-search"></use>
-          </svg>
+          <div class="nav__icon-wrapper">
+            <svg class="nav__icon">
+              <use xlink:href="src/img/sprite.svg#icon-search"></use>
+            </svg>
+          </div>
 
-          <svg class="nav__icon">
-            <use xlink:href="src/img/sprite.svg#icon-cart"></use>
-          </svg>
+          <div class="nav__icon-wrapper">
+            <svg class="nav__icon">
+              <use xlink:href="src/img/sprite.svg#icon-cart"></use>
+            </svg>
 
-          <svg class="nav__icon">
-            <use xlink:href="src/img/sprite.svg#icon-user"></use>
-          </svg>
+            <div class="nav__cart-number">1</div>
+          </div>
+
+          <div class="nav__icon-wrapper">
+            <svg class="nav__icon">
+              <use xlink:href="src/img/sprite.svg#icon-user"></use>
+            </svg>
+          </div>
         </div>
       </nav>
 
       <header class="header">
         <div class="header__content">
-          <h1 class="heading-1 mg-top-big mg-bt-sm">
+          <h1 class="heading-1 mg-top-big mg-bt-sm" id="home">
             The best place to buy top quality products for your pets
           </h1>
           <p class="regular-text">Shop by pet, brand or products on sale!</p>
@@ -66,7 +74,7 @@
       </header>
 
       <section class="categories-section">
-        <h2 class="heading-2">Categories</h2>
+        <h2 class="heading-2" id="categories">Categories</h2>
         <div class="categories">
           <div class="categories__item">
             <p class="categories__name">Dogs</p>
@@ -316,7 +324,7 @@
     </div>
 
     <section class="blogs-section">
-      <h2 class="heading-2">Read our blog</h2>
+      <h2 class="heading-2" id="blog">Read our blog</h2>
       <div class="blogs">
         <div class="blog">
           <div class="blog__img-container">
@@ -400,11 +408,63 @@
             </div>
           </div>
         </div>
+        <div class="blog">
+          <div class="blog__img-container">
+            <img src="/src/img/blog-1.jpg" alt="Dog artice" class="blog__img" />
+          </div>
+          <div class="blog__info">
+            <div class="blog__info-wrapper">
+              <h3 class="heading-3">
+                5 Tips on How to Make Your Dog's Fur Healthy and Shiny
+              </h3>
+              <p class="blog__desc">
+                In this artice we will give you some advice from vets to help
+                you make the fur nice and shiny
+              </p>
+            </div>
+            <div class="blog__author">
+              <div class="blog__author-img-container">
+                <img
+                  src="/src/img/author-1.jpg"
+                  alt="Author 1"
+                  class="blog__author-img"
+                />
+              </div>
+              <div class="blog__name">Dr. May</div>
+            </div>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="blog__img-container">
+            <img src="/src/img/blog-1.jpg" alt="Dog artice" class="blog__img" />
+          </div>
+          <div class="blog__info">
+            <div class="blog__info-wrapper">
+              <h3 class="heading-3">
+                5 Tips on How to Make Your Dog's Fur Healthy and Shiny
+              </h3>
+              <p class="blog__desc">
+                In this artice we will give you some advice from vets to help
+                you make the fur nice and shiny
+              </p>
+            </div>
+            <div class="blog__author">
+              <div class="blog__author-img-container">
+                <img
+                  src="/src/img/author-1.jpg"
+                  alt="Author 1"
+                  class="blog__author-img"
+                />
+              </div>
+              <div class="blog__name">Dr. May</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="contact-section">
-      <h2 class="heading-2">Contact Us</h2>
+      <h2 class="heading-2" id="contact">Contact Us</h2>
       <div class="contact">
         <div class="contact__info-map">
           <div class="contact__info">
