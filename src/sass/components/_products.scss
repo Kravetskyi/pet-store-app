@@ -1,6 +1,19 @@
+.products-wrapper {
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  transition: all 1s;
+}
+
+.slider {
+  width: 200%;
+  display: flex;
+  gap: 2rem;
+}
+
 .products-section {
   display: grid;
-  width: 100%;
+  min-width: 100%;
   //   background-color: $color-primary-dark;
   //   height: 48rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

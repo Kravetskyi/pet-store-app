@@ -15,4 +15,19 @@
     width: 2.75rem;
     fill: $color-primary-dark;
   }
+
+  .heading-3 {
+    margin-right: auto;
+  }
+}
+
+.pagination {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+
+  & > * {
+    cursor: pointer;
+  }
 }
