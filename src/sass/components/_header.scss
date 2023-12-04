@@ -1,9 +1,9 @@
 .header {
-  height: calc(100vh - 10rem);
+  height: calc(100vh);
   width: 70%;
   margin: 0 auto;
 
-  padding-top: 12rem;
+  padding-top: 22rem; //initial 12 rem + 10 rem of nav height
 
   display: flex;
 

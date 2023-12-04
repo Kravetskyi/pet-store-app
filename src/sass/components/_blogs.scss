@@ -45,9 +45,10 @@
   scrollbar-gutter: stable;
   box-sizing: content-box;
   height: 35.8rem;
+  border-radius: 5px;
 
   &:hover {
-    overflow-x: auto;
+    overflow-x: scroll;
   }
 }
 

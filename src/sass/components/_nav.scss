@@ -1,3 +1,8 @@
+.nav-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
 .nav {
   height: 10rem;
   width: 70%;
@@ -67,5 +72,23 @@
     font-size: 1.3rem;
     font-weight: 700;
     display: none;
+  }
+}
+
+.sticky {
+  position: fixed;
+  background-color: $color-bg;
+  z-index: 100;
+  opacity: 0;
+  animation: appear 0.3s forwards;
+
+  & > * {
+    border: none;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
   }
 }
