@@ -9,6 +9,7 @@
   width: 200%;
   display: flex;
   gap: 2rem;
+  transition: all 1s;
 }
 
 .products-section {
@@ -156,4 +157,18 @@
   &:hover &__showcase::before {
     opacity: 1;
   }
+}
+
+.last-page {
+  transform: translateX(calc(-100% - 2rem));
+}
+
+.first-page {
+  transform: translateX(0%);
+}
+
+.disabled {
+  color: $color-primary-light-2;
+  opacity: 0.5;
+  transition: all 0.3s;
 }

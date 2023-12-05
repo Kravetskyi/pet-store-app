@@ -9,6 +9,117 @@
     <script defer src="/src/js/controller.js" type="module"></script>
   </head>
   <body>
+    <div class="overlay"></div>
+    <div class="cart">
+      <div class="cart__header">
+        <h2 class="heading-2">Your shopping cart (1)</h2>
+        <div class="cart__close">&#10005;</div>
+      </div>
+
+      <div class="cart__content">
+        <div class="cart__item">
+          <div class="cart__img-container">
+            <img src="/src/img/chicken-treats.jpg" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__name-price">
+            <div class="cart__name">Chicken treats</div>
+            <div class="cart__price">$8.99</div>
+          </div>
+
+          <div class="cart__change">
+            <div class="cart__decrease">-</div>
+            <div class="cart__number">1</div>
+            <div class="cart__increase">+</div>
+          </div>
+        </div>
+
+        <div class="cart__item">
+          <div class="cart__img-container">
+            <img src="/src/img/dog-blanket.jpg" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__name-price">
+            <div class="cart__name">Heated dog bed & blanket</div>
+            <div class="cart__price">$8.99</div>
+          </div>
+
+          <div class="cart__change">
+            <div class="cart__decrease">-</div>
+            <div class="cart__number">1</div>
+            <div class="cart__increase">+</div>
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="cart__img-container">
+            <img src="/src/img/dog-treat.jpg" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__name-price">
+            <div class="cart__name">Dog treat</div>
+            <div class="cart__price">$8.99</div>
+          </div>
+
+          <div class="cart__change">
+            <div class="cart__decrease">-</div>
+            <div class="cart__number">1</div>
+            <div class="cart__increase">+</div>
+          </div>
+        </div>
+
+        <div class="cart__item">
+          <div class="cart__img-container">
+            <img src="/src/img/bird-feed.jpg" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__name-price">
+            <div class="cart__name">Bird feed</div>
+            <div class="cart__price">$8.99</div>
+          </div>
+
+          <div class="cart__change">
+            <div class="cart__decrease">-</div>
+            <div class="cart__number">1</div>
+            <div class="cart__increase">+</div>
+          </div>
+        </div>
+
+        <div class="cart__item">
+          <div class="cart__img-container">
+            <img src="/src/img/bone-toy.jpg" alt="" class="cart__img" />
+          </div>
+
+          <div class="cart__name-price">
+            <div class="cart__name">Bone toy</div>
+            <div class="cart__price">$8.99</div>
+          </div>
+
+          <div class="cart__change">
+            <div class="cart__decrease">-</div>
+            <div class="cart__number">1</div>
+            <div class="cart__increase">+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart__count">
+        <div class="cart__subtotal">
+          <p class="cart__text">Sub-total:</p>
+          <p class="cart__fee">$180.83</p>
+        </div>
+        <div class="cart__shipping">
+          <p class="cart__text">Shipping cost:</p>
+          <p class="cart__fee">$10</p>
+        </div>
+      </div>
+
+      <div class="cart__total">
+        <div class="cart__text-total">Total</div>
+        <div class="cart__price-total">$190.83</div>
+      </div>
+
+      <button class="cart__btn">CHECKOUT</button>
+    </div>
     <div class="landing">
       <div class="nav-wrapper">
         <nav class="nav">
@@ -39,143 +150,11 @@
             </div>
 
             <div class="nav__icon-wrapper">
-              <svg class="nav__icon">
+              <svg class="nav__icon" id="cart_btn">
                 <use xlink:href="src/img/sprite.svg#icon-cart"></use>
               </svg>
 
               <div class="nav__cart-number">1</div>
-              <div class="cart">
-                <div class="cart__header">
-                  <h2 class="heading-2">Your shopping cart (1)</h2>
-                  <div class="cart__close">&#10005;</div>
-                </div>
-
-                <div class="cart__content">
-                  <div class="cart__item">
-                    <div class="cart__img-container">
-                      <img
-                        src="/src/img/chicken-treats.jpg"
-                        alt=""
-                        class="cart__img"
-                      />
-                    </div>
-
-                    <div class="cart__name-price">
-                      <div class="cart__name">Chicken treats</div>
-                      <div class="cart__price">$8.99</div>
-                    </div>
-
-                    <div class="cart__change">
-                      <div class="cart__decrease">-</div>
-                      <div class="cart__number">1</div>
-                      <div class="cart__increase">+</div>
-                    </div>
-                  </div>
-
-                  <div class="cart__item">
-                    <div class="cart__img-container">
-                      <img
-                        src="/src/img/dog-blanket.jpg"
-                        alt=""
-                        class="cart__img"
-                      />
-                    </div>
-
-                    <div class="cart__name-price">
-                      <div class="cart__name">Heated dog bed & blanket</div>
-                      <div class="cart__price">$8.99</div>
-                    </div>
-
-                    <div class="cart__change">
-                      <div class="cart__decrease">-</div>
-                      <div class="cart__number">1</div>
-                      <div class="cart__increase">+</div>
-                    </div>
-                  </div>
-                  <div class="cart__item">
-                    <div class="cart__img-container">
-                      <img
-                        src="/src/img/dog-treat.jpg"
-                        alt=""
-                        class="cart__img"
-                      />
-                    </div>
-
-                    <div class="cart__name-price">
-                      <div class="cart__name">Dog treat</div>
-                      <div class="cart__price">$8.99</div>
-                    </div>
-
-                    <div class="cart__change">
-                      <div class="cart__decrease">-</div>
-                      <div class="cart__number">1</div>
-                      <div class="cart__increase">+</div>
-                    </div>
-                  </div>
-
-                  <div class="cart__item">
-                    <div class="cart__img-container">
-                      <img
-                        src="/src/img/bird-feed.jpg"
-                        alt=""
-                        class="cart__img"
-                      />
-                    </div>
-
-                    <div class="cart__name-price">
-                      <div class="cart__name">Bird feed</div>
-                      <div class="cart__price">$8.99</div>
-                    </div>
-
-                    <div class="cart__change">
-                      <div class="cart__decrease">-</div>
-                      <div class="cart__number">1</div>
-                      <div class="cart__increase">+</div>
-                    </div>
-                  </div>
-
-                  <div class="cart__item">
-                    <div class="cart__img-container">
-                      <img
-                        src="/src/img/bone-toy.jpg"
-                        alt=""
-                        class="cart__img"
-                      />
-                    </div>
-
-                    <div class="cart__name-price">
-                      <div class="cart__name">Bone toy</div>
-                      <div class="cart__price">$8.99</div>
-                    </div>
-
-                    <div class="cart__change">
-                      <div class="cart__decrease">-</div>
-                      <div class="cart__number">1</div>
-                      <div class="cart__increase">+</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cart__count">
-                  <div class="cart__subtotal">
-                    <p class="cart__text">Sub-total:</p>
-                    <p class="cart__fee">$180.83</p>
-                  </div>
-                  <div class="cart__shipping">
-                    <p class="cart__text">Shipping cost:</p>
-                    <p class="cart__fee">$10</p>
-                  </div>
-                </div>
-
-                <div class="cart__total">
-                  <div class="cart__text-total">Total</div>
-                  <div class="cart__price-total">$190.83</div>
-                </div>
-
-                <button class="cart__btn">CHECKOUT</button>
-              </div>
-
-              <div class="overlay"></div>
             </div>
 
             <div class="nav__icon-wrapper">
@@ -447,7 +426,7 @@
                 <div class="product">
                   <figure class="product__showcase">
                     <img
-                      src="/src/img/dog-bed.jpg"
+                      src="/src/img/shades.jpg"
                       alt="Dog bed"
                       class="product__img"
                     />
@@ -457,21 +436,21 @@
                   </figure>
                   <div class="product__info">
                     <div class="product__i-row-1">
-                      <p class="product__name">Heated dog bed & blanket</p>
+                      <p class="product__name">Cool summer shades</p>
                       <svg class="product__save">
                         <use xlink:href="src/img/sprite.svg#icon-heart"></use>
                       </svg>
                     </div>
                     <div class="product__i-row-2">
-                      <p class="product__discount">$8.99</p>
-                      <p class="product__price">$13.99</p>
+                      <p class="product__discount">$9.99</p>
+                      <p class="product__price">$14.99</p>
                     </div>
                   </div>
                 </div>
                 <div class="product">
                   <figure class="product__showcase">
                     <img
-                      src="/src/img/chicken-treats.jpg"
+                      src="/src/img/cat-hoodie.webp"
                       alt="Chicken treats"
                       class="product__img"
                     />
@@ -481,21 +460,21 @@
                   </figure>
                   <div class="product__info">
                     <div class="product__i-row-1">
-                      <p class="product__name">Chicken treats</p>
+                      <p class="product__name">Amazing cat hoodie</p>
                       <svg class="product__save">
                         <use xlink:href="src/img/sprite.svg#icon-heart"></use>
                       </svg>
                     </div>
                     <div class="product__i-row-2">
-                      <p class="product__discount">$8.99</p>
-                      <p class="product__price">$13.99</p>
+                      <p class="product__discount">$10.99</p>
+                      <p class="product__price">$17.99</p>
                     </div>
                   </div>
                 </div>
                 <div class="product">
                   <figure class="product__showcase">
                     <img
-                      src="/src/img/dog-blanket.jpg"
+                      src="/src/img/cage.webp"
                       alt="Dog blanket"
                       class="product__img"
                     />
@@ -505,21 +484,21 @@
                   </figure>
                   <div class="product__info">
                     <div class="product__i-row-1">
-                      <p class="product__name">Warm dog bed</p>
+                      <p class="product__name">Comfy double-door dog crate</p>
                       <svg class="product__save">
                         <use xlink:href="src/img/sprite.svg#icon-heart"></use>
                       </svg>
                     </div>
                     <div class="product__i-row-2">
-                      <p class="product__discount">$8.99</p>
-                      <p class="product__price">$13.99</p>
+                      <p class="product__discount">$16.99</p>
+                      <p class="product__price">$20.99</p>
                     </div>
                   </div>
                 </div>
                 <div class="product">
                   <figure class="product__showcase">
                     <img
-                      src="/src/img/dog-treat.jpg"
+                      src="/src/img/millet.jpg"
                       alt="Dog treat"
                       class="product__img"
                     />
@@ -529,14 +508,14 @@
                   </figure>
                   <div class="product__info">
                     <div class="product__i-row-1">
-                      <p class="product__name">Barf raw meat crackers</p>
+                      <p class="product__name">Millet for birds</p>
                       <svg class="product__save">
                         <use xlink:href="src/img/sprite.svg#icon-heart"></use>
                       </svg>
                     </div>
                     <div class="product__i-row-2">
-                      <p class="product__discount">$8.99</p>
-                      <p class="product__price">$13.99</p>
+                      <p class="product__discount">$3.99</p>
+                      <p class="product__price">$5.99</p>
                     </div>
                   </div>
                 </div>

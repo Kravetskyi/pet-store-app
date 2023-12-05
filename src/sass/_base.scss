@@ -102,6 +102,10 @@ body {
   gap: 4rem;
 }
 
+.show {
+  display: flex !important;
+}
+
 ::-webkit-scrollbar {
   width: 16px;
 }
@@ -118,4 +122,10 @@ body {
 
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
 }
