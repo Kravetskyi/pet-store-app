@@ -32,12 +32,15 @@ const controlPagination = function (bool = false) {
   else view.moveNext();
 };
 
+const controlProducts = function () {};
+
 const init = () => {
   controlObserver();
   controlTimer();
   view.addHandlerBtn(controlCartOpen);
   view.addHandlerCartClose(controlCartClose);
   view.addHandlerPagination(controlPagination);
+  view.addHandlerAddToCart(controlProducts);
 };
 
 init();

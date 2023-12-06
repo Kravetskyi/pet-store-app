@@ -1,0 +1,36 @@
+.alert {
+  position: fixed;
+  z-index: 99999999999;
+  right: 50%;
+  top: -100%;
+  transform: translateX(50%);
+  //   width: 200px;
+  background-color: #373737;
+  color: white;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding: 1.5rem 2.5rem;
+}
+
+.notification {
+  animation: notify 2s ease;
+}
+
+@keyframes notify {
+  0% {
+    top: -10%;
+  }
+
+  40% {
+    top: 10%;
+  }
+
+  80% {
+    top: 10%;
+  }
+
+  100% {
+    top: -10%;
+  }
+}
