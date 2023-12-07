@@ -87,4 +87,12 @@ const calculateTotal = function () {
   );
 };
 
-export const deleteItem = function (item) {};
+export const deleteItem = function (item) {
+  const indexOfDelete = state.items.findIndex(
+    (itemS) => itemS.name === item.querySelector(".cart__name").innerHTML
+  );
+  if (indexOfDelete < 0) return;
+  state.items.splice(indexOfDelete, 1);
+
+  calculateTotal();
+};

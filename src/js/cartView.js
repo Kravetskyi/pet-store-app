@@ -33,6 +33,8 @@ class CartView {
       if (!deleteBtn) return;
       const prod = e.target.closest(".cart__item");
       callback(prod);
+
+      this._disappearItem(prod);
     });
   }
 
@@ -40,6 +42,10 @@ class CartView {
     this._clear();
     const html = this._generateMarkup();
     this._cart.insertAdjacentHTML("afterbegin", html);
+    this.renderNumbers();
+  }
+
+  renderNumbers() {
     this._generateTotal();
     this._changeNumberOfItems();
   }
@@ -54,7 +60,9 @@ class CartView {
 
   _generateTotal() {
     this._subtotal.innerHTML = `$${this._data.total.toFixed(2)}`;
-    this._total.innerHTML = `$${(this._data.total + 10).toFixed(2)}`;
+
+    if (this._data.total + 10 === 10) this._total.innerHTML = "$0.00";
+    else this._total.innerHTML = `$${(this._data.total + 10).toFixed(2)}`;
   }
 
   _changeNumberOfItems() {
@@ -87,6 +95,11 @@ class CartView {
 
   _clear() {
     this._cart.innerHTML = "";
+  }
+
+  _disappearItem(item) {
+    item.classList.add("deleted");
+    setTimeout(() => item.remove(), 500);
   }
 
   update(data) {

@@ -54,6 +54,9 @@ const controlQuantity = function (item, incr = false) {
 
 const controlDelete = function (item) {
   model.deleteItem(item);
+
+  cartView.render(model.state);
+  cartView.renderNumbers();
 };
 
 const init = () => {

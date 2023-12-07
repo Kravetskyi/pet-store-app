@@ -38,6 +38,8 @@
     gap: 2rem;
     border-radius: 15px;
     overflow-y: scroll;
+
+    transition: height 1s;
   }
 
   &__delete {
@@ -252,6 +254,21 @@
 
 .cart-slide-out {
   animation: slide-out 0.5s forwards;
+}
+
+.deleted {
+  animation: disappear 0.5s forwards;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(0.01);
+  }
 }
 
 @keyframes slide-in {
