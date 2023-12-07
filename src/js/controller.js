@@ -2,6 +2,7 @@
 
 import * as model from "./model.js";
 import view from "./view.js";
+import cartView from "./cartView.js";
 
 if (module.hot) {
   module.hot.accept();
@@ -32,7 +33,15 @@ const controlPagination = function (bool = false) {
   else view.moveNext();
 };
 
-const controlProducts = function () {};
+const controlProducts = function (item) {
+  model.parseItem(item);
+
+  //save data into view
+  cartView.render(model.state);
+
+  //render cart items
+  cartView.renderItems();
+};
 
 const init = () => {
   controlObserver();

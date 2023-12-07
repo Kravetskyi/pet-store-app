@@ -2,10 +2,14 @@
 import { TIME } from "./config";
 import { controlString } from "./controller";
 
+export const state = {
+  total: 1,
+  items: [],
+};
+
 // Intersection Observer for nav and header
 export const observer = function (header, nav) {
   const navHeight = nav.getBoundingClientRect().height;
-  console.log(navHeight);
   const observerOptions = {
     root: null,
     threshold: 0,
@@ -37,4 +41,27 @@ export const timerUpdating = function () {
       location.reload();
     }
   }, 1000);
+};
+
+export const parseItem = function (item) {
+  const cartItem = {
+    name: item.querySelector(".product__name").innerHTML,
+    price: item.querySelector(".product__discount").innerHTML,
+    img: item.querySelector(".product__img").src,
+    quantity: 1,
+  };
+
+  if (state.items.some((item) => item.name === cartItem.name)) {
+    const changeItem = state.items.find((item) => item.name === cartItem.name);
+    cartItem.quantity = changeItem.quantity + 1;
+    state.items[state.items.indexOf(changeItem)] = cartItem;
+  } else {
+    state.items.push(cartItem);
+  }
+
+  state.total = state.items.reduce(
+    (acc, value) =>
+      acc + parseFloat(value.price.replace("$", "")) * value.quantity,
+    0
+  );
 };

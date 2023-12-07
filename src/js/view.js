@@ -1,5 +1,4 @@
 "use strict";
-import { TIME } from "./config";
 
 class View {
   headerSection = document.querySelector(".header");
@@ -66,6 +65,7 @@ class View {
       if (!btn) return;
       const product = btn.closest(".product");
       this._notify();
+      callback(product);
     });
   }
 
@@ -111,11 +111,9 @@ class View {
   _notify() {
     this._alert.classList.add("notification");
     this._disableBtns();
-    console.log("disabled");
     setTimeout(() => {
       this._alert.classList.remove("notification");
       this._enableBtns();
-      console.log("enabled");
     }, 2000);
   }
 
