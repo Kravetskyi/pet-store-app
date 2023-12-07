@@ -16,6 +16,7 @@ import sprite from "../img/sprite.svg";
 class ProductView {
   _sections = Array.from(document.querySelectorAll(".products-section"));
   _slider = document.querySelector(".slider");
+  _alert = document.querySelector(".alert");
   _allImports = {
     heatedBed,
     chicken,
@@ -41,6 +42,18 @@ class ProductView {
     window.addEventListener("load", callback);
   }
 
+  renderProducts() {
+    this._clear();
+
+    const html1 = this._generateMarkup(true);
+    const html2 = this._generateMarkup(false);
+
+    this._sections[0].insertAdjacentHTML("afterbegin", html1);
+    this._sections[1].insertAdjacentHTML("afterbegin", html2);
+
+    this._prodBtns = Array.from(document.querySelectorAll(".product__btn"));
+  }
+
   addHandlerSave(callback) {
     this._slider.addEventListener("click", (e) => {
       const saveBtn = e.target.closest(".product__save");
@@ -57,14 +70,31 @@ class ProductView {
     el.classList.toggle("product__save--saved");
   }
 
-  renderProducts() {
-    this._clear();
+  addHandlerAddToCart(callback) {
+    this._slider.addEventListener("click", (e) => {
+      const btn = e.target.closest(".product__btn");
+      if (!btn) return;
+      const product = btn.closest(".product");
+      this._notify();
+      callback(product);
+    });
+  }
 
-    const html1 = this._generateMarkup(true);
-    const html2 = this._generateMarkup(false);
+  _notify() {
+    this._alert.classList.add("notification");
+    this._disableBtns();
+    setTimeout(() => {
+      this._alert.classList.remove("notification");
+      this._enableBtns();
+    }, 2000);
+  }
 
-    this._sections[0].insertAdjacentHTML("afterbegin", html1);
-    this._sections[1].insertAdjacentHTML("afterbegin", html2);
+  _disableBtns() {
+    this._prodBtns.forEach((btn) => btn.setAttribute("disabled", true));
+  }
+
+  _enableBtns() {
+    this._prodBtns.forEach((btn) => btn.removeAttribute("disabled"));
   }
 
   _generateMarkup(bool) {
@@ -93,7 +123,9 @@ class ProductView {
         <div class="product__info">
         <div class="product__i-row-1">
             <p class="product__name">${prod.name}</p>
-            <svg class="product__save">
+            <svg class="product__save ${
+              prod.wishlisted ? "product__save--saved" : ""
+            }">
             <use xlink:href="${sprite}#icon-heart"></use>
             </svg>
         </div>

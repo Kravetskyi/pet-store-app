@@ -161,6 +161,7 @@ export const parseItem = function (item) {
   }
 
   calculateTotal();
+  persistCart();
 };
 
 export const changeQuantity = function (item, incr = false) {
@@ -176,6 +177,7 @@ export const changeQuantity = function (item, incr = false) {
   state.items[state.items.indexOf(changeItem)] = cloneItem;
 
   calculateTotal();
+  persistCart();
 
   return true;
 };
@@ -196,6 +198,7 @@ export const deleteItem = function (item) {
   state.items.splice(indexOfDelete, 1);
 
   calculateTotal();
+  persistCart();
 };
 
 export const saveItem = function (item) {
@@ -219,4 +222,28 @@ export const saveItem = function (item) {
       state.products.sectionTwo[i].wishlisted = true;
     else state.products.sectionTwo[i].wishlisted = false;
   }
+
+  persistProducts();
 };
+
+const persistProducts = function () {
+  localStorage.setItem("products", JSON.stringify(state.products));
+};
+
+const persistCart = function () {
+  localStorage.setItem("items", JSON.stringify(state.items));
+};
+
+const init = function () {
+  const prods = localStorage.getItem("products");
+  if (prods) state.products = JSON.parse(prods);
+
+  const cart = localStorage.getItem("items");
+  if (cart) state.items = JSON.parse(cart);
+
+  console.log(state);
+
+  calculateTotal();
+};
+
+init();

@@ -38,8 +38,11 @@
     gap: 2rem;
     border-radius: 15px;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     transition: height 1s;
+
+    perspective: 1000px;
   }
 
   &__delete {
@@ -257,7 +260,8 @@
 }
 
 .deleted {
-  animation: disappear 0.5s forwards;
+  animation: disappear 1s forwards;
+  backface-visibility: hidden;
 }
 
 @keyframes disappear {
@@ -267,7 +271,7 @@
 
   100% {
     opacity: 0;
-    transform: scaleY(0.01);
+    transform: rotateX(180deg);
   }
 }
 

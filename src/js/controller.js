@@ -64,6 +64,9 @@ const controlRender = function () {
   productView.render(model.state);
 
   productView.renderProducts();
+
+  cartView.render(model.state);
+  cartView.renderItems();
 };
 
 const controlSave = function (item) {
@@ -77,10 +80,10 @@ const init = () => {
   view.addHandlerBtn(controlCartOpen);
   view.addHandlerCartClose(controlCartClose);
   view.addHandlerPagination(controlPagination);
-  view.addHandlerAddToCart(controlProducts);
   cartView.addHandlerQuantity(controlQuantity);
   cartView.addHandlerDelete(controlDelete);
   productView.addHandlerSave(controlSave);
+  productView.addHandlerAddToCart(controlProducts);
 };
 
 init();

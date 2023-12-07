@@ -12,9 +12,6 @@ class View {
   _pagBtns = Array.from(
     document.querySelector(".pagination").querySelectorAll("*")
   );
-  _prodBtns = Array.from(document.querySelectorAll(".product__btn"));
-  _slider = document.querySelector(".slider");
-  _alert = document.querySelector(".alert");
 
   updateTimer(min, sec) {
     const arrayMinutes = Array.from(this._timer_minutes.querySelectorAll("*"));
@@ -59,16 +56,6 @@ class View {
     );
   }
 
-  addHandlerAddToCart(callback) {
-    this._slider.addEventListener("click", (e) => {
-      const btn = e.target.closest(".product__btn");
-      if (!btn) return;
-      const product = btn.closest(".product");
-      this._notify();
-      callback(product);
-    });
-  }
-
   addHandlerPagination(callback) {
     this._pagBtns.forEach((btn) =>
       btn.addEventListener("click", (e) => {
@@ -106,23 +93,6 @@ class View {
     this._slider.classList.add("last-page");
     this._pagBtns[1].classList.add("disabled");
     this._pagBtns[0].classList.remove("disabled");
-  }
-
-  _notify() {
-    this._alert.classList.add("notification");
-    this._disableBtns();
-    setTimeout(() => {
-      this._alert.classList.remove("notification");
-      this._enableBtns();
-    }, 2000);
-  }
-
-  _disableBtns() {
-    this._prodBtns.forEach((btn) => btn.setAttribute("disabled", true));
-  }
-
-  _enableBtns() {
-    this._prodBtns.forEach((btn) => btn.removeAttribute("disabled"));
   }
 }
 
