@@ -43,6 +43,19 @@ const controlProducts = function (item) {
   cartView.renderItems();
 };
 
+const controlQuantity = function (item, incr = false) {
+  if (incr) model.changeQuantity(item, true);
+  else {
+    const success = model.changeQuantity(item);
+    if (!success) return;
+  }
+  cartView.update(model.state);
+};
+
+const controlDelete = function (item) {
+  model.deleteItem(item);
+};
+
 const init = () => {
   controlObserver();
   controlTimer();
@@ -50,6 +63,8 @@ const init = () => {
   view.addHandlerCartClose(controlCartClose);
   view.addHandlerPagination(controlPagination);
   view.addHandlerAddToCart(controlProducts);
+  cartView.addHandlerQuantity(controlQuantity);
+  cartView.addHandlerDelete(controlDelete);
 };
 
 init();

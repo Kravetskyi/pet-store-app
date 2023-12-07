@@ -59,9 +59,32 @@ export const parseItem = function (item) {
     state.items.push(cartItem);
   }
 
+  calculateTotal();
+};
+
+export const changeQuantity = function (item, incr = false) {
+  const changeItem = state.items.find(
+    (itemS) => itemS.name === item.querySelector(".cart__name").innerHTML
+  );
+  const cloneItem = structuredClone(changeItem);
+
+  if (incr) cloneItem.quantity = changeItem.quantity + 1;
+  else cloneItem.quantity = changeItem.quantity - 1;
+  if (cloneItem.quantity < 1) return false;
+
+  state.items[state.items.indexOf(changeItem)] = cloneItem;
+
+  calculateTotal();
+
+  return true;
+};
+
+const calculateTotal = function () {
   state.total = state.items.reduce(
     (acc, value) =>
       acc + parseFloat(value.price.replace("$", "")) * value.quantity,
     0
   );
 };
+
+export const deleteItem = function (item) {};
