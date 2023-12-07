@@ -5,6 +5,107 @@ import { controlString } from "./controller";
 export const state = {
   total: 1,
   items: [],
+  products: {
+    sectionOne: [
+      {
+        name: "Heated dog bed & blanket",
+        price: "$25.99",
+        originalPrice: "$30.00",
+        wishlisted: "false",
+        src: "heatedBed",
+      },
+
+      {
+        name: "Chicken treats",
+        price: "$8.99",
+        originalPrice: "$13.99",
+        wishlisted: "false",
+        src: "chicken",
+      },
+
+      {
+        name: "Warm dog bed",
+        price: "$13.99",
+        originalPrice: "$16.99",
+        wishlisted: "false",
+        src: "dogBed",
+      },
+
+      {
+        name: "Barf raw meat crackers",
+        price: "$6.99",
+        originalPrice: "$9.50",
+        wishlisted: "false",
+        src: "treats",
+      },
+
+      {
+        name: "Bird feed",
+        price: "$3.99",
+        originalPrice: "$5.99",
+        wishlisted: "false",
+        src: "bird",
+      },
+
+      {
+        name: "Bone toy",
+        price: "$2.99",
+        originalPrice: "$4.99",
+        wishlisted: "false",
+        src: "bone",
+      },
+    ],
+
+    sectionTwo: [
+      {
+        name: "Cool summer shades",
+        price: "$9.99",
+        originalPrice: "$14.99",
+        wishlisted: "false",
+        src: "shades",
+      },
+
+      {
+        name: "Amazing cat hoodie",
+        price: "$10.99",
+        originalPrice: "$17.99",
+        wishlisted: "false",
+        src: "hoodie",
+      },
+
+      {
+        name: "Comfy dog crate",
+        price: "$16.99",
+        originalPrice: "$20.99",
+        wishlisted: "false",
+        src: "crate",
+      },
+
+      {
+        name: "Millet for birds",
+        price: "$3.99",
+        originalPrice: "$5.99",
+        wishlisted: "false",
+        src: "millet",
+      },
+
+      {
+        name: "Cat toy",
+        price: "$5.99",
+        originalPrice: "$9.99",
+        wishlisted: "false",
+        src: "catToy",
+      },
+
+      {
+        name: "Delicious cat food",
+        price: "$6.50",
+        originalPrice: "$8.99",
+        wishlisted: "false",
+        src: "catFood",
+      },
+    ],
+  },
 };
 
 // Intersection Observer for nav and header

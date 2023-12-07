@@ -3,6 +3,7 @@
 import * as model from "./model.js";
 import view from "./view.js";
 import cartView from "./cartView.js";
+import productView from "./productView.js";
 
 if (module.hot) {
   module.hot.accept();
@@ -59,7 +60,14 @@ const controlDelete = function (item) {
   cartView.renderNumbers();
 };
 
+const controlRender = function () {
+  productView.render(model.state);
+
+  productView.renderProducts();
+};
+
 const init = () => {
+  productView.addHandlerRender(controlRender);
   controlObserver();
   controlTimer();
   view.addHandlerBtn(controlCartOpen);
