@@ -78,9 +78,19 @@
   }
 
   &__save {
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: $color-primary-light-1;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--saved {
+      fill: $color-primary-dark;
+    }
   }
 
   &__i-row-2 {

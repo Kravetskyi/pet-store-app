@@ -8,10 +8,10 @@ export const state = {
   products: {
     sectionOne: [
       {
-        name: "Heated dog bed & blanket",
+        name: "Heated dog bed &amp; blanket",
         price: "$25.99",
         originalPrice: "$30.00",
-        wishlisted: "false",
+        wishlisted: false,
         src: "heatedBed",
       },
 
@@ -19,7 +19,7 @@ export const state = {
         name: "Chicken treats",
         price: "$8.99",
         originalPrice: "$13.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "chicken",
       },
 
@@ -27,7 +27,7 @@ export const state = {
         name: "Warm dog bed",
         price: "$13.99",
         originalPrice: "$16.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "dogBed",
       },
 
@@ -35,7 +35,7 @@ export const state = {
         name: "Barf raw meat crackers",
         price: "$6.99",
         originalPrice: "$9.50",
-        wishlisted: "false",
+        wishlisted: false,
         src: "treats",
       },
 
@@ -43,7 +43,7 @@ export const state = {
         name: "Bird feed",
         price: "$3.99",
         originalPrice: "$5.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "bird",
       },
 
@@ -51,7 +51,7 @@ export const state = {
         name: "Bone toy",
         price: "$2.99",
         originalPrice: "$4.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "bone",
       },
     ],
@@ -61,7 +61,7 @@ export const state = {
         name: "Cool summer shades",
         price: "$9.99",
         originalPrice: "$14.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "shades",
       },
 
@@ -69,7 +69,7 @@ export const state = {
         name: "Amazing cat hoodie",
         price: "$10.99",
         originalPrice: "$17.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "hoodie",
       },
 
@@ -77,7 +77,7 @@ export const state = {
         name: "Comfy dog crate",
         price: "$16.99",
         originalPrice: "$20.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "crate",
       },
 
@@ -85,7 +85,7 @@ export const state = {
         name: "Millet for birds",
         price: "$3.99",
         originalPrice: "$5.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "millet",
       },
 
@@ -93,7 +93,7 @@ export const state = {
         name: "Cat toy",
         price: "$5.99",
         originalPrice: "$9.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "catToy",
       },
 
@@ -101,7 +101,7 @@ export const state = {
         name: "Delicious cat food",
         price: "$6.50",
         originalPrice: "$8.99",
-        wishlisted: "false",
+        wishlisted: false,
         src: "catFood",
       },
     ],
@@ -196,4 +196,27 @@ export const deleteItem = function (item) {
   state.items.splice(indexOfDelete, 1);
 
   calculateTotal();
+};
+
+export const saveItem = function (item) {
+  const searchedItem1 = state.products.sectionOne.find(
+    (obj) => obj.name === item.querySelector(".product__name").innerHTML
+  );
+
+  const searchedItem2 = state.products.sectionTwo.find(
+    (obj) => obj.name === item.querySelector(".product__name").innerHTML
+  );
+
+  if (searchedItem1) {
+    const i = state.products.sectionOne.indexOf(searchedItem1);
+    if (!state.products.sectionOne[i].wishlisted)
+      state.products.sectionOne[i].wishlisted = true;
+    else state.products.sectionOne[i].wishlisted = false;
+  }
+  if (searchedItem2) {
+    const i = state.products.sectionTwo.indexOf(searchedItem2);
+    if (!state.products.sectionTwo[i].wishlisted)
+      state.products.sectionTwo[i].wishlisted = true;
+    else state.products.sectionTwo[i].wishlisted = false;
+  }
 };

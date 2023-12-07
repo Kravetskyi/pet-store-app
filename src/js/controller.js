@@ -66,6 +66,10 @@ const controlRender = function () {
   productView.renderProducts();
 };
 
+const controlSave = function (item) {
+  model.saveItem(item);
+};
+
 const init = () => {
   productView.addHandlerRender(controlRender);
   controlObserver();
@@ -76,6 +80,7 @@ const init = () => {
   view.addHandlerAddToCart(controlProducts);
   cartView.addHandlerQuantity(controlQuantity);
   cartView.addHandlerDelete(controlDelete);
+  productView.addHandlerSave(controlSave);
 };
 
 init();

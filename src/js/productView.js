@@ -45,7 +45,16 @@ class ProductView {
     this._slider.addEventListener("click", (e) => {
       const saveBtn = e.target.closest(".product__save");
       if (!saveBtn) return;
+      const item = e.target.closest(".product");
+
+      const svg = item.querySelector(".product__save");
+      this._toggleSaved(svg);
+      callback(item);
     });
+  }
+
+  _toggleSaved(el) {
+    el.classList.toggle("product__save--saved");
   }
 
   renderProducts() {
