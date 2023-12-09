@@ -13,6 +13,9 @@ class View {
     document.querySelector(".pagination").querySelectorAll("*")
   );
   _slider = document.querySelector(".slider");
+  _search = document.getElementById("search_btn");
+  _searchSVG = document.querySelector(".header__icon");
+  _input = document.querySelector(".header__input");
 
   updateTimer(min, sec) {
     const arrayMinutes = Array.from(this._timer_minutes.querySelectorAll("*"));
@@ -67,6 +70,30 @@ class View {
         callback();
       })
     );
+  }
+
+  addHandlerSearch(callback) {
+    this._search.addEventListener("click", (e) => {
+      const btn = e.target.closest(".nav__icon");
+      if (!btn) return;
+      callback();
+    });
+
+    this._searchSVG.addEventListener("click", (e) => {
+      const btn = e.target.closest(".header__icon");
+      if (!btn) return;
+      this._input.focus();
+    });
+  }
+
+  searchFocus() {
+    this._input.focus();
+    const inpCoords = this._input.getBoundingClientRect();
+    window.scrollTo({
+      left: inpCoords.x,
+      top: inpCoords.y - 50,
+      behavior: "smooth",
+    });
   }
 
   cartOpen() {

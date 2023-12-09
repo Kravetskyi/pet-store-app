@@ -241,8 +241,6 @@ const init = function () {
   const cart = localStorage.getItem("items");
   if (cart) state.items = JSON.parse(cart);
 
-  console.log(state);
-
   calculateTotal();
 };
 

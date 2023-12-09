@@ -30,6 +30,10 @@ const controlCartClose = function () {
   view.cartClose();
 };
 
+const controlSearch = function () {
+  view.searchFocus();
+};
+
 const controlPagination = function (bool = false) {
   if (bool) view.movePrev();
   else view.moveNext();
@@ -93,6 +97,7 @@ const init = () => {
   view.addHandlerBtn(controlCartOpen);
   view.addHandlerCartClose(controlCartClose);
   view.addHandlerPagination(controlPagination);
+  view.addHandlerSearch(controlSearch);
   cartView.addHandlerQuantity(controlQuantity);
   cartView.addHandlerDelete(controlDelete);
   productView.addHandlerSave(controlSave);
