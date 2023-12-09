@@ -12,6 +12,7 @@ class View {
   _pagBtns = Array.from(
     document.querySelector(".pagination").querySelectorAll("*")
   );
+  _slider = document.querySelector(".slider");
 
   updateTimer(min, sec) {
     const arrayMinutes = Array.from(this._timer_minutes.querySelectorAll("*"));

@@ -1,17 +1,17 @@
 "use strict";
-import heatedBed from "../img/dog-bed.jpg";
-import chicken from "../img/chicken-treats.jpg";
-import dogBed from "../img/dog-blanket.jpg";
-import treats from "../img/dog-treat.jpg";
-import bird from "../img/bird-feed.jpg";
-import bone from "../img/bone-toy.jpg";
-import shades from "../img/shades.jpg";
-import hoodie from "../img/cat-hoodie.webp";
-import crate from "../img/crate.webp";
-import millet from "../img/millet.jpg";
-import catToy from "../img/cat-toy.jpg";
-import catFood from "../img/cat-food.jpg";
-import sprite from "../img/sprite.svg";
+import heatedBed from "../../img/dog-bed.jpg";
+import chicken from "../../img/chicken-treats.jpg";
+import dogBed from "../../img/dog-blanket.jpg";
+import treats from "../../img/dog-treat.jpg";
+import bird from "../../img/bird-feed.jpg";
+import bone from "../../img/bone-toy.jpg";
+import shades from "../../img/shades.jpg";
+import hoodie from "../../img/cat-hoodie.webp";
+import crate from "../../img/crate.webp";
+import millet from "../../img/millet.jpg";
+import catToy from "../../img/cat-toy.jpg";
+import catFood from "../../img/cat-food.jpg";
+import sprite from "../../img/sprite.svg";
 
 class ProductView {
   _sections = Array.from(document.querySelectorAll(".products-section"));

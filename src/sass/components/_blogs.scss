@@ -55,7 +55,7 @@
 .blog {
   height: 35rem;
   background-color: white;
-  box-shadow: 1rem 1rem 1rem rgba($color: black, $alpha: 0.03);
+  box-shadow: 1rem -1rem 1rem rgba($color: black, $alpha: 0.03);
   min-width: calc(100% / 3 - 2.5rem);
   border-radius: 15px;
   display: flex;

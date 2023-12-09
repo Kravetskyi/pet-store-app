@@ -1,9 +1,10 @@
 "use strict";
 
 import * as model from "./model.js";
-import view from "./view.js";
-import cartView from "./cartView.js";
-import productView from "./productView.js";
+import view from "./view/view.js";
+import cartView from "./view/cartView.js";
+import productView from "./view/productView.js";
+import numberView from "./view/numberView.js";
 
 if (module.hot) {
   module.hot.accept();
@@ -37,6 +38,10 @@ const controlPagination = function (bool = false) {
 const controlProducts = function (item) {
   model.parseItem(item);
 
+  //render cart blob
+  numberView.render(model.state);
+  numberView.renderElement();
+
   //save data into view
   cartView.render(model.state);
 
@@ -56,6 +61,10 @@ const controlQuantity = function (item, incr = false) {
 const controlDelete = function (item) {
   model.deleteItem(item);
 
+  //render cart blob
+  numberView.render(model.state);
+  numberView.renderElement();
+
   cartView.render(model.state);
   cartView.renderNumbers();
 };
@@ -64,6 +73,10 @@ const controlRender = function () {
   productView.render(model.state);
 
   productView.renderProducts();
+
+  //render cart blob
+  numberView.render(model.state);
+  numberView.renderElement();
 
   cartView.render(model.state);
   cartView.renderItems();
