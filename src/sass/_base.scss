@@ -18,6 +18,15 @@ $color-timer-text-light: #afb2cb;
 
 $color-input-valid: #55c57a;
 
+//**BREAK POINTS**
+$bp-largest: 112.5em;
+$bp-large: 97.5em;
+$bp-medium-large: 81.5em;
+$bp-n-medium: 71.75em;
+$bp-medium: 61em;
+$bp-medium-av: 56.25em;
+$bp-medium-small: 47.8em;
+
 *,
 *::after,
 *::before {
@@ -31,6 +40,18 @@ html {
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: $bp-medium-large) {
+    font-size: 55%;
+  }
+
+  @media only screen and (max-width: $bp-medium-av) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -93,6 +114,23 @@ body {
   gap: 14rem;
   margin: 0 auto;
   padding-bottom: 15rem;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $bp-medium-large) {
+    gap: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-n-medium) {
+    width: 100%;
+    padding: 0 3rem 15rem 3rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .content {

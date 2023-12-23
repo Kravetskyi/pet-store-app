@@ -11,6 +11,12 @@
   align-items: center;
   gap: 2.3rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    width: 40%;
+    padding: 3rem 4rem;
+    align-self: center;
+  }
+
   &__text {
     display: flex;
     align-items: center;

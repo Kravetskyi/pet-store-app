@@ -1,11 +1,29 @@
 .header {
-  height: calc(100vh);
+  min-height: calc(100vh);
   width: 70%;
   margin: 0 auto;
 
   padding-top: 22rem; //initial 12 rem + 10 rem of nav height
 
   display: flex;
+
+  @media only screen and (max-width: $bp-medium-small) {
+    h1::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $bp-n-medium) {
+    width: 100%;
+    padding: 22rem 3rem;
+    text-align: center;
+  }
 
   &__img-container {
     // background-image: url("/src/img/dog-header.jpg");
@@ -23,6 +41,18 @@
     max-width: 40rem;
     max-height: 50rem;
     border-radius: 170px;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-medium-av) {
+      margin-left: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium-small) {
+      display: none;
+    }
   }
 
   // &__content {

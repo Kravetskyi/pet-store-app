@@ -9,6 +9,15 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-n-medium) {
+      width: 100%;
+      padding: 7rem 3rem 0 3rem;
+    }
   }
 
   &__logo {

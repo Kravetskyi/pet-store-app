@@ -17,6 +17,14 @@
   gap: 2rem;
   display: flex;
 
+  @media only screen and (max-width: $bp-large) {
+    width: 65%;
+  }
+
+  @media only screen and (max-width: $bp-n-medium) {
+    width: 75%;
+  }
+
   & > * {
     height: 100%;
     border-radius: 15px;

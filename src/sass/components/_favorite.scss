@@ -10,6 +10,11 @@
   flex: calc(100% / 2);
   border-radius: 15px;
 
+  @media only screen and (max-width: $bp-medium) {
+    width: 40%;
+    padding: 5rem 0;
+  }
+
   &--cat {
     background-image: linear-gradient(rgba(white, 0.4), rgba(white, 0.4)),
       url("/src/img/cat-eat.webp");

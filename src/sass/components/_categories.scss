@@ -6,6 +6,15 @@
   gap: 5rem;
   align-items: center;
   padding-bottom: 20rem;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $bp-n-medium) {
+    width: 100%;
+    padding: 0 3rem 20rem 3rem;
+  }
 }
 
 .categories {
@@ -14,6 +23,11 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium-av) {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
 
   &__item {
     flex-basis: calc(100% / 6 - 1rem);
@@ -26,6 +40,10 @@
     align-items: center;
     box-shadow: 0 0 0.5rem rgba(black, 0.05);
     border: 1px solid $color-tertiary-dark;
+
+    @media only screen and (max-width: $bp-medium-av) {
+      flex-basis: calc(100% / 4);
+    }
   }
 
   &__name {
