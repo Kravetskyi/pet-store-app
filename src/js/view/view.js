@@ -11,7 +11,7 @@ class View {
     document.querySelector(".pagination").querySelectorAll("*")
   );
   _slider = document.querySelector(".slider");
-  _search = document.getElementById("search_btn");
+  _search = document.querySelector(".nav__icon--search");
   _searchSVG = document.querySelector(".header__icon");
   _input = document.querySelector(".header__input");
 
@@ -40,7 +40,6 @@ class View {
   }
 
   addHandlerBtn(callback) {
-    console.log(this._cartBtn);
     this._cartBtn.addEventListener("click", (e) => {
       const btn = e.target.closest("#cart_btn");
       if (!btn) return;
@@ -72,6 +71,7 @@ class View {
   }
 
   addHandlerSearch(callback) {
+    console.log(this._search);
     this._search.addEventListener("click", (e) => {
       const btn = e.target.closest(".nav__icon");
       if (!btn) return;
