@@ -41,8 +41,9 @@ class View {
 
   addHandlerBtn(callback) {
     this._cartBtn.addEventListener("click", (e) => {
-      const btn = e.target.closest("#cart_btn");
+      const btn = e.target.closest(".nav__icon");
       if (!btn) return;
+      console.log();
       callback();
     });
   }
@@ -71,7 +72,6 @@ class View {
   }
 
   addHandlerSearch(callback) {
-    console.log(this._search);
     this._search.addEventListener("click", (e) => {
       const btn = e.target.closest(".nav__icon");
       if (!btn) return;
