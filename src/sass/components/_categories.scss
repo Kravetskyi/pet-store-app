@@ -44,6 +44,8 @@
     align-items: center;
     box-shadow: 0 0 0.5rem rgba(black, 0.05);
     border: 1px solid $color-tertiary-dark;
+    cursor: pointer;
+    transition: transform 0.3s;
 
     @media only screen and (max-width: $bp-medium-av) {
       flex-basis: calc(100% / 4);
@@ -56,6 +58,10 @@
     @media only screen and (max-width: $bp-small-extra) {
       flex-basis: calc(100% / 2.2);
       width: 20%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 

@@ -5,6 +5,7 @@ import view from "./view/view.js";
 import cartView from "./view/cartView.js";
 import productView from "./view/productView.js";
 import numberView from "./view/numberView.js";
+import mobileView from "./view/mobileView.js";
 
 if (module.hot) {
   module.hot.accept();
@@ -90,6 +91,14 @@ const controlSave = function (item) {
   model.saveItem(item);
 };
 
+const controlMobileOpen = function () {
+  mobileView.open();
+};
+
+const controlMobileClose = function () {
+  mobileView.close();
+};
+
 const init = () => {
   productView.addHandlerRender(controlRender);
   controlObserver();
@@ -102,6 +111,9 @@ const init = () => {
   cartView.addHandlerDelete(controlDelete);
   productView.addHandlerSave(controlSave);
   productView.addHandlerAddToCart(controlProducts);
+  mobileView.addHandlerOpen(controlMobileOpen);
+  mobileView.addHandlerClose(controlMobileClose);
+  mobileView.addHandlerLinks(controlMobileClose);
 };
 
 init();
