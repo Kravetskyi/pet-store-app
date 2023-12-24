@@ -105,7 +105,6 @@ class View {
 
   cartClose() {
     this._overlay.classList.remove("show");
-    // this._cart.classList.remove("show");
     this._cart.classList.remove("cart-slide-in");
     this._cart.classList.add("cart-slide-out");
   }

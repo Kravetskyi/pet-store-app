@@ -30,12 +30,10 @@ class MobileView {
 
   open() {
     this._parentElement.classList.add("mobile__nav--opened");
-    console.log("good");
   }
 
   close() {
     this._parentElement.classList.remove("mobile__nav--opened");
-    console.log("good");
   }
 }
 
