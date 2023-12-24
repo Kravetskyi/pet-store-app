@@ -3,7 +3,7 @@ class View {
   nav = document.querySelector(".nav-wrapper");
   _timer_seconds = document.querySelector(".timer__seconds");
   _timer_minutes = document.querySelector(".timer__minutes");
-  _cartBtn = document.getElementById("cart_btn");
+  _cartBtn = document.querySelector(".nav__icon--cart");
   _overlay = document.querySelector(".overlay");
   _cart = document.querySelector(".cart");
   _cartClose = document.querySelector(".cart__close");
@@ -40,6 +40,7 @@ class View {
   }
 
   addHandlerBtn(callback) {
+    console.log(this._cartBtn);
     this._cartBtn.addEventListener("click", (e) => {
       const btn = e.target.closest("#cart_btn");
       if (!btn) return;
