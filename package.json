@@ -5,7 +5,8 @@
   "scripts": {
     "devserver": "live-server",
     "watch:sass": "sass src/sass/main.scss src/css/style.css -w",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
