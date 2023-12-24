@@ -1,3 +1,5 @@
+"use strict";
+
 class View {
   headerSection = document.querySelector(".header");
   nav = document.querySelector(".nav-wrapper");
@@ -41,7 +43,7 @@ class View {
 
   addHandlerBtn(callback) {
     this._cartBtn.addEventListener("click", (e) => {
-      const btn = e.target.closest(".nav__icon");
+      const btn = e.target.closest(".nav__icon ");
       if (!btn) return;
       console.log();
       callback();

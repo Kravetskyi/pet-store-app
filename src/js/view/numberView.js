@@ -1,3 +1,5 @@
+"use strict";
+
 class NumberView {
   _parentElement = document.querySelector(".nav__cart-number-wrapper");
 

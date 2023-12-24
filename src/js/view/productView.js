@@ -1,3 +1,5 @@
+"use strict";
+
 import heatedBed from "../../img/dog-bed.jpg";
 import chicken from "../../img/chicken-treats.jpg";
 import dogBed from "../../img/dog-blanket.jpg";

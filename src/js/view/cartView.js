@@ -1,3 +1,5 @@
+"use strict";
+
 class CartView {
   _cart = document.querySelector(".cart__content");
   _subtotal = document
