@@ -1,4 +1,3 @@
-"use strict";
 import { TIME } from "./config";
 import { controlString } from "./controller";
 

@@ -1,5 +1,3 @@
-"use strict";
-
 class MobileView {
   _parentElement = document.querySelector(".mobile__nav");
   _list = document.querySelector(".mobile__list");

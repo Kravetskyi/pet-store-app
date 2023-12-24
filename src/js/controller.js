@@ -1,5 +1,3 @@
-"use strict";
-
 import * as model from "./model.js";
 import view from "./view/view.js";
 import cartView from "./view/cartView.js";
