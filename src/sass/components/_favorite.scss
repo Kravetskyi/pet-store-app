@@ -3,6 +3,10 @@
   flex-grow: 1;
   display: flex;
   gap: 2rem;
+
+  @media only screen and (max-width: $bp-smaller) {
+    flex-direction: column;
+  }
 }
 
 .favorite {
@@ -13,6 +17,10 @@
   @media only screen and (max-width: $bp-medium) {
     width: 40%;
     padding: 5rem 0;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    width: 100%;
   }
 
   &--cat {

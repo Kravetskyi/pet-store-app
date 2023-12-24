@@ -14,6 +14,10 @@
   @media only screen and (max-width: $bp-medium) {
     flex-direction: row;
   }
+
+  @media only screen and (max-width: $bp-smaller) {
+    flex-direction: column;
+  }
 }
 
 .offer {
@@ -29,6 +33,10 @@
 
   @media only screen and (max-width: $bp-medium) {
     width: 50%;
+  }
+
+  @media only screen and (max-width: $bp-smaller) {
+    width: 100%;
   }
 
   &__text {

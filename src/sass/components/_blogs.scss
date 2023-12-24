@@ -83,6 +83,14 @@
     min-width: calc(100% / 2 - 2.5rem);
   }
 
+  @media only screen and (max-width: $bp-small) {
+    min-width: calc(100% / 1.2 - 2.5rem);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    min-width: calc(100% / 1 - 2.5rem);
+  }
+
   &__img-container {
     height: 45%;
     // background-color: $color-tertiary-dark;
@@ -111,6 +119,14 @@
 
     .heading-3 {
       line-height: 1.2;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.8rem;
+      }
     }
 
     &-wrapper {
@@ -126,6 +142,10 @@
     font-weight: 400;
     font-size: 1.45rem;
     margin-bottom: auto;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.3rem;
+    }
   }
 
   &__author {

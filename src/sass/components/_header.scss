@@ -7,14 +7,6 @@
 
   display: flex;
 
-  @media only screen and (max-width: $bp-medium-small) {
-    h1::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-    }
-  }
-
   @media only screen and (max-width: $bp-large) {
     width: 80%;
   }
@@ -23,6 +15,12 @@
     width: 100%;
     padding: 22rem 3rem;
     text-align: center;
+  }
+
+  @media only screen and (max-width: $bp-medium-small) {
+    flex-direction: column;
+
+    padding-top: 15rem;
   }
 
   &__img-container {
@@ -51,13 +49,30 @@
     }
 
     @media only screen and (max-width: $bp-medium-small) {
-      display: none;
+      order: -1;
+      background-image: url("/src/img/black-pug-small.png");
+      background-size: 70%;
+      background-position: center;
+      align-self: center;
+      min-height: 30rem;
+      min-width: 30rem;
+      max-width: 35rem;
+      max-height: 35rem;
+      filter: blur(0.7px);
+      box-shadow: 0rem 0rem 3rem 3rem $color-tertiary-dark;
+      position: absolute;
+      z-index: 2;
+      right: 5%;
     }
   }
 
-  // &__content {
-  //   border: 1px solid black;
-  // }
+  &__content {
+    z-index: 5;
+
+    @media only screen and (max-width: $bp-medium-small) {
+      padding-top: 12rem;
+    }
+  }
 
   &__search-container {
     // border: 1px solid pink;
@@ -78,6 +93,11 @@
     font-family: inherit;
     font-size: inherit;
 
+    @media only screen and (max-width: $bp-smallest) {
+      height: 4.5rem;
+      flex: 0 0 80%;
+    }
+
     &:focus {
       outline: none;
     }
@@ -92,8 +112,10 @@
 
   &__icon {
     align-self: center;
-    height: 3rem;
-    width: 3rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    max-height: 2.5rem;
+    max-width: 2.5rem;
     fill: $color-primary-dark;
     margin-left: -7rem;
     cursor: pointer;
@@ -110,5 +132,10 @@
     box-shadow: 0 0.2rem 1rem rgba(black, 0.2);
     cursor: pointer;
     background-color: $color-secondary;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1.5rem;
+      font-size: 1.3rem;
+    }
   }
 }

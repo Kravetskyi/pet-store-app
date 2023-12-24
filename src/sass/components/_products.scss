@@ -24,6 +24,10 @@
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .product {
@@ -33,6 +37,10 @@
   display: flex;
   flex-direction: column;
   box-shadow: 1rem 1rem 1rem rgba($color: black, $alpha: 0.05);
+
+  @media only screen and (max-width: $bp-small) {
+    box-shadow: 1rem 0.1rem 1rem rgba($color: black, $alpha: 0.02);
+  }
 
   &__showcase {
     // background-color: $color-primary-light-1;
